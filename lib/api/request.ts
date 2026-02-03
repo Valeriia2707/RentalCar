@@ -1,7 +1,7 @@
-import { FiltersParams, Car } from "@/types/cars";
+import { FiltersParams, Car, CarsResponse } from "@/types/cars";
 import { api } from "./api";
 
-export async function fetchCars(params: FiltersParams = {}): Promise<Car[]> {
+export async function fetchCars(params: FiltersParams = {}): Promise<CarsResponse> {
     const {
         page = '1',
         limit = '12',
@@ -11,7 +11,7 @@ export async function fetchCars(params: FiltersParams = {}): Promise<Car[]> {
         maxMileage,
     } = params;
 
-    const res = await api.get<Car[]>("/cars", {
+    const res = await api.get<CarsResponse>("/cars", {
         params: {
             page,
             limit,

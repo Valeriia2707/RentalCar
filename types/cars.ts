@@ -26,3 +26,10 @@ export interface Car {
   rentalConditions: string[],
   mileage: number,
 }
+
+export interface CarsResponse {
+  cars: Car[];
+  totalCars: number;
+  totalPages: number;
+  page: string;
+}

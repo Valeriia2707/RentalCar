@@ -28,9 +28,11 @@ export const useStore = create<StoreState>()(
                 set({ isLoading: true });
                 try {
                     const currentPage = 1;
+                    
                     const data = await fetchCars({ ...params, page: currentPage.toString() });
+                    console.log("API Response:", data);
                         set({
-                            cars: data,
+                            cars: data.cars,
                             page: currentPage,
                             filters: params,
                         });
@@ -49,7 +51,7 @@ export const useStore = create<StoreState>()(
                 try {
                     const newCars = await fetchCars({ ...filters, page: nextPage.toString() });
                         set({
-                            cars: [...cars, ...newCars],
+                            cars: [...cars, ...newCars.cars],
                             page: nextPage,
                         });
                 }
