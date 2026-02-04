@@ -1,0 +1,110 @@
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end; /* Вирівнюємо по низу, щоб кнопка була на рівні з інпутами */
+  gap: 18px;
+  margin-bottom: 50px;
+  flex-wrap: wrap; /* Щоб на мобільному переносилось */
+}
+
+.filterGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.label {
+  font-size: 14px;
+  font-weight: 500;
+  color: #8a8a89;
+  line-height: 1.28;
+}
+
+/* Спільні стилі для селектів */
+.selectBig,
+.selectSmall {
+  height: 48px;
+  padding: 14px 18px;
+  background-color: #f7f7fb; /* Світло-сірий фон */
+  border: none;
+  border-radius: 14px;
+  font-size: 18px;
+  font-weight: 500;
+  color: #121417;
+  cursor: pointer;
+  outline: none;
+
+  /* Прибираємо стандартну стрілку браузера (можна потім додати свою через background-image) */
+  /* appearance: none; */
+}
+
+.selectBig {
+  width: 224px;
+}
+
+.selectSmall {
+  width: 125px;
+}
+
+/* Блок пробігу */
+.mileageWrapper {
+  display: flex;
+}
+
+.inputWrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.prefix {
+  position: absolute;
+  left: 24px; /* Відступ тексту "From"/"To" */
+  font-size: 18px;
+  font-weight: 500;
+  color: #121417;
+  pointer-events: none; /* Щоб клік проходив крізь текст */
+}
+
+.inputLeft,
+.inputRight {
+  height: 48px;
+  background-color: #f7f7fb;
+  border: none;
+  font-size: 18px;
+  font-weight: 500;
+  color: #121417;
+  outline: none;
+  width: 160px;
+  padding-left: 70px; /* Місце для слова From/To */
+}
+
+/* Лівий інпут: закруглення зліва, права сторона рівна */
+.inputLeft {
+  border-radius: 14px 0 0 14px;
+  border-right: 1px solid rgba(138, 138, 137, 0.2); /* Роздільник посередині */
+}
+
+/* Правий інпут: закруглення справа, ліва сторона рівна */
+.inputRight {
+  border-radius: 0 14px 14px 0;
+  padding-left: 50px; /* Для слова "To" відступ менший */
+}
+
+/* Кнопка пошуку */
+.searchBtn {
+  height: 48px;
+  padding: 14px 44px;
+  background-color: #3470ff;
+  border: none;
+  border-radius: 12px;
+  color: white;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.searchBtn:hover {
+  background-color: #0b44cd;
+}

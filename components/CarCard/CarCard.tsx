@@ -19,7 +19,7 @@ export const CarCard = ({ car }: CarCardProps) => {
           className={css.img}
         />
         <button className={css.heartBtn} type="button">
-          <Icon id={"Love"} className={""}></Icon>
+          <Icon id={"Love"} className={css.heartIcon}></Icon>
         </button>
       </div>
 
@@ -29,16 +29,17 @@ export const CarCard = ({ car }: CarCardProps) => {
             {car.brand} <span className={css.model}>{car.model}</span>,{" "}
             {car.year}
           </h3>
-          <span className={css.price}>{car.rentalPrice}</span>
+          <span className={css.price}>{"$" + car.rentalPrice}</span>
         </div>
 
         <div className={css.tags}>
-          <span>{car.address.split(",")[1]}</span>
-          <span>{car.rentalCompany + " "}</span>
-          <span>{car.type}</span>
+          <span>{car.address.split(",")[1] + " " + "|" + " "}</span>
+          <span>{car.rentalCompany + " " + "|" + " "}</span> <br />
+          <span>{car.type + " " + "|" + " "}</span>
+          <span>{car.mileage + " " + "km"}</span>
         </div>
 
-        <button className={css.learnMoreBtn}>Learn more</button>
+        <button className={css.learnMoreBtn}>Read more</button>
       </div>
     </li>
   );

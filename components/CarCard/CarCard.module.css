@@ -1,0 +1,73 @@
+.img {
+  border-radius: 14px;
+  width: 276px;
+  height: 268px;
+  position: relative;
+  margin-bottom: 16px;
+}
+
+.heartBtn {
+  background-color: transparent;
+  border: none;
+}
+
+.heartIcon {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  width: 16px;
+  height: 16px;
+  fill: #fff;
+  stroke: #fff;
+}
+
+.model {
+  font-family: var(--font-manrope);
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.25;
+  color: #3470ff;
+}
+
+.title {
+  font-family: var(--font-manrope);
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.25;
+  color: #101828;
+}
+.titleRow {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 8px;
+}
+
+.tags {
+  width: 276px;
+  font-family: var(--font-manrope);
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 1.33;
+  color: #8d929a;
+  margin-bottom: 28px;
+}
+
+.learnMoreBtn {
+  border-radius: 12px;
+  padding: 12px 99px;
+  background: #3470ff;
+  border: none;
+  font-family: var(--font-manrope);
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 1.25;
+  color: #fff;
+}
+
+.price {
+  font-family: var(--font-manrope);
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.25;
+  color: #101828;
+}
