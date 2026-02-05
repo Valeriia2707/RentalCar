@@ -33,3 +33,4 @@ export async function fetchBrands(): Promise<string[]> {
     const res = await api.get<string[]>("/brands");
     return res.data;
 }
+

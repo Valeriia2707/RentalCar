@@ -2,12 +2,18 @@ import { Car } from "@/types/cars";
 import css from "./CarCard.module.css";
 import Image from "next/image";
 import { Icon } from "../Icon/Icon";
+import { useStore } from "@/store/useStore";
 
 interface CarCardProps {
   car: Car;
 }
 
 export const CarCard = ({ car }: CarCardProps) => {
+  const { favorites, toggleFavorite } = useStore();
+
+  const isFavorite = favorites.some((fav) => fav.id === car.id);
+  const iconId = isFavorite ? "Love-blue" : "Love";
+
   return (
     <li className={css.card}>
       <div className={css.imgWrapper}>
@@ -17,9 +23,14 @@ export const CarCard = ({ car }: CarCardProps) => {
           width={276}
           height={268}
           className={css.img}
+          loading="eager"
         />
-        <button className={css.heartBtn} type="button">
-          <Icon id={"Love"} className={css.heartIcon}></Icon>
+        <button
+          className={css.heartBtn}
+          type="button"
+          onClick={() => toggleFavorite(car)}
+        >
+          <Icon id={iconId} className={css.heartIcon} />
         </button>
       </div>
 

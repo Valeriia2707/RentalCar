@@ -1,5 +1,5 @@
 import CarList from "@/components/CarList/CarList";
-import Filters from "@/components/Filters/Filters"; // <--- Імпорт
+import Filters from "@/components/Filters/Filters";
 import css from "./page.module.css";
 
 export default function CatalogPage() {

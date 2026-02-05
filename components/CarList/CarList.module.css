@@ -1,14 +1,17 @@
 .list {
-  display: flex;
-  gap: 32px;
+  gap: 48px 32px;
   flex-wrap: wrap;
   list-style-type: none;
   margin-bottom: 80px;
-  justify-content: baseline;
+  display: grid;
+  grid-template-columns: repeat(4, 276px);
+  justify-content: center;
+  padding: 0;
 }
 
 .wrapper {
   padding-top: 56px;
+  min-height: 100vh;
 }
 .moreBtn {
   font-family: var(--font-manrope);
@@ -22,4 +25,17 @@
   background: transparent;
   margin: 0 auto;
   display: block;
+}
+
+.imgLoader {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  background-color: #f3f3f3;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
