@@ -3,6 +3,7 @@ import css from "./CarCard.module.css";
 import Image from "next/image";
 import { Icon } from "../Icon/Icon";
 import { useStore } from "@/store/useStore";
+import Link from "next/link";
 
 interface CarCardProps {
   car: Car;
@@ -50,7 +51,9 @@ export const CarCard = ({ car }: CarCardProps) => {
           <span>{car.mileage + " " + "km"}</span>
         </div>
 
-        <button className={css.learnMoreBtn}>Read more</button>
+        <Link href={`/catalog/${car.id}`} className={css.learnMoreBtn}>
+          Read more
+        </Link>
       </div>
     </li>
   );
